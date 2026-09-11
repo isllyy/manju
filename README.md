@@ -6,11 +6,22 @@
 
 **中文** | [English](#english)
 
+## ✨ 示例：通信伊姐
+
+以“通信伊姐”Q版 IP 为示例：输入一张角色母图，Skill 会先锁定 **脸型、黑色长发+刘海、棕色大眼睛、蓝色 AI 帽、白蓝通信 Polo、米杏色短裤与斜挎包** 等不可变视觉锚点，再扩展为完整资产系统。
+
+最终可以得到：**Hero 主视觉 → 正/侧/背三视图 → 工作形象 → 生活形象 → 表情库 → 细节库 → 连续场景调用规则**。
+
+完整案例见 [`examples/tongxin-yijie.md`](examples/tongxin-yijie.md)。
+
+> **Before：** 一张好看的 IP 图。  
+> **After：** 一个可以反复出演会议、直播、培训、旅行、短剧和故事板的“数字演员”。
+
 ## 为什么值得用
 
 普通提示词往往把角色“描述一次就结束”。这个 Skill 把人物当成长期可调用的演员资产：
 
-- **先锁身份**：真实人物照片作为 Identity Master Reference，不重新设计成“相似脸”。
+- **先锁身份**：真实人物照片或 IP 母图作为 Identity Master Reference，不重新设计成“相似脸”。
 - **再建 DNA**：脸、发型、身形、衣橱、配饰、轮廓全部结构化。
 - **再做资产**：Hero + 三视图 + 动作 + 表情 + 细节。
 - **最后连续调用**：后续只改场景、动作、情绪、镜头与允许的服装变体。
@@ -28,8 +39,8 @@ npx skills add isllyy/manju
 - “用这张照片建立我的人物资产，以后所有图都锁定这个人。”
 - “给这个角色做一张 16:9 的 Character Bible。”
 - “生成正面、侧面、背面三视图，再补动作和表情库。”
-- “给伊水生成一套日常工作形象。”
-- “再做一套日常生活休闲形象，但仍然是同一个人。”
+- “把通信伊姐生成一套日常工作形象。”
+- “再做一套日常生活休闲形象，但仍然是同一个 IP。”
 - “沿用刚才角色，生成雨夜街头的电影分镜。”
 
 ## 核心资产模型
@@ -60,6 +71,8 @@ Skill 会从人物中提取 5–8 个不能随意漂移的锚点，例如：
 
 真实照片应在使用 Skill 时由用户提供，只作为运行时身份参考。除非人物本人明确要求公开，否则不要把原始职业照、身份证明、联系方式或其他个人信息提交到公共仓库。
 
+“通信伊姐”案例使用的是卡通 IP 方法示范，不包含真人身份母图。
+
 ## 文件结构
 
 ```text
@@ -67,6 +80,8 @@ yishui-juesezichan/
 ├── SKILL.md
 ├── README.md
 ├── LICENSE
+├── examples/
+│   └── tongxin-yijie.md
 ├── references/
 │   ├── character-dna-template.md
 │   ├── prompt-library.md
@@ -77,7 +92,7 @@ yishui-juesezichan/
 
 ## 设计来源与沉淀
 
-本 Skill 来自真实的角色资产工作流迭代：从职业母图开始，依次建立专业角色资产板、日常工作形象、日常生活休闲形象，并进一步抽象出 Character DNA、视觉锚点和连续镜头规则。
+本 Skill 来自真实的角色资产工作流迭代：从角色母图开始，依次建立专业角色资产板、日常工作形象、日常生活休闲形象，并进一步抽象出 Character DNA、视觉锚点和连续镜头规则。
 
 发布流程参考 `joeseesun/qiaomu-skill-publisher` 的实践：严格 YAML frontmatter、README 产品化、一行安装和发布后的真实安装验证。参考项目本身不被复制到本仓库。  
 Reference: https://github.com/joeseesun/qiaomu-skill-publisher
@@ -101,6 +116,8 @@ MIT — 代码与 Skill 文本可复用；用户运行时提供的真人照片�
 `yishui-juesezichan` turns a portrait or character brief into a reusable Character Bible for consistent AI visual production.
 
 It creates a structured Character DNA, immutable visual anchors, identity-lock rules, turnaround views, poses, expressions, detail studies, work/lifestyle looks, and continuity prompts for later scenes.
+
+The public example uses the **Tongxin Yijie / 通信伊姐** chibi IP to demonstrate the path from one reference image to a reusable digital actor.
 
 ### Install
 
