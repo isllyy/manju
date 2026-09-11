@@ -1,0 +1,10 @@
+[
+  {"input":"用这张照片建立我的人物资产，以后做短剧都保持这个人","should_trigger":true},
+  {"input":"给林阳生成正面侧面背面三视图，还要表情库","should_trigger":true},
+  {"input":"把伊水生成一套日常工作的形象版","should_trigger":true},
+  {"input":"再生成一份日常生活的休闲形象图","should_trigger":true},
+  {"input":"沿用刚才那个角色，做雨夜客栈拔剑的分镜","should_trigger":true},
+  {"input":"分析这个人物为什么看起来专业","should_trigger":false},
+  {"input":"给我做一张纯风景海报","should_trigger":false},
+  {"input":"把这段会议纪要改得简洁一点","should_trigger":false}
+]
