@@ -1,5 +1,11 @@
 # yishui-juesezichan
 
+<p align="center">
+  <img src="assets/tongxin-yijie-hero.png" alt="通信伊姐角色资产系统示例" width="100%" />
+</p>
+
+<p align="center"><strong>一张角色图 → 一套角色资产 → 一个可持续调用的数字演员</strong></p>
+
 > 你做 AI 短剧、海报或职业 IP 时，最难的往往不是“生成一个好看的人”，而是 **下一张图还是同一个人**。
 >
 > `yishui-juesezichan` 把一张人物照片或一段角色设定沉淀成可复用的 Character Bible：角色 DNA、不可变视觉锚点、锁脸规则、三视图、动作、表情、细节、工作形象、生活形象，以及后续连续镜头调用规则。
@@ -10,7 +16,7 @@
 
 以“通信伊姐”Q版 IP 为示例：输入一张角色母图，Skill 会先锁定 **脸型、黑色长发+刘海、棕色大眼睛、蓝色 AI 帽、白蓝通信 Polo、米杏色短裤与斜挎包** 等不可变视觉锚点，再扩展为完整资产系统。
 
-最终可以得到：**Hero 主视觉 → 正/侧/背三视图 → 工作形象 → 生活形象 → 表情库 → 细节库 → 连续场景调用规则**。
+**角色母图 → Character DNA → 标准三视图 → 表情库 → 细节资产 → 工作/生活形象 → 多场景连续调用**
 
 完整案例见 [`examples/tongxin-yijie.md`](examples/tongxin-yijie.md)。
 
@@ -80,6 +86,8 @@ yishui-juesezichan/
 ├── SKILL.md
 ├── README.md
 ├── LICENSE
+├── assets/
+│   └── tongxin-yijie-hero.png
 ├── examples/
 │   └── tongxin-yijie.md
 ├── references/
